@@ -1,0 +1,6 @@
+streamlit
+langchain-openai
+langchain
+langchain-community
+neo4j
+streamlit-keyup

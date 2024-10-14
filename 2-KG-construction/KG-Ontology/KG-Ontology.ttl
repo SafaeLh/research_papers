@@ -1,0 +1,239 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@base 			<http://visualdataweb.org/newOntology/> .
+
+<http://visualdataweb.org/newOntology/> rdf:type owl:Ontology ;
+                                        dc:title "KG-Ontologie-papers"@en; 
+                                        dc:description "Ontology of academic research papers  "@en; 
+                                        owl:versionInfo "0.1"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 28 ###
+#  --------------------------- Property 0------------------------- 
+:publishedIn rdf:type owl:ObjectProperty ;
+             rdfs:label "publishedIn"@IRI-based; 
+             rdfs:label "publishedIn"@iri-based; 
+             rdfs:label "publishedIn"@en; 
+             rdfs:domain :Paper;
+             rdfs:range :Venue . 
+#  --------------------------- Property 1------------------------- 
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:label "title"@IRI-based; 
+       rdfs:label "title"@iri-based; 
+       rdfs:label "title"@en; 
+       rdfs:domain :Paper;
+       rdfs:range xsd:string . 
+#  --------------------------- Property 2------------------------- 
+:categoryID rdf:type owl:DatatypeProperty ;
+            rdfs:label "categoryID"@IRI-based; 
+            rdfs:label "categoryID"@iri-based; 
+            rdfs:label "categoryID"@en; 
+            rdfs:domain :Category;
+            rdfs:range xsd:integer . 
+#  --------------------------- Property 3------------------------- 
+:hasDOI rdf:type owl:DatatypeProperty ;
+        rdfs:label "hasDOI"@IRI-based; 
+        rdfs:label "hasDOI"@iri-based; 
+        rdfs:label "DOI"@en; 
+        rdfs:domain :Paper;
+        rdfs:range xsd:string . 
+#  --------------------------- Property 4------------------------- 
+:cites rdf:type owl:ObjectProperty ;
+       rdfs:label "cites"@IRI-based; 
+       rdfs:label "cites"@iri-based; 
+       rdfs:label "cites"@en; 
+       rdfs:domain :Paper;
+       rdfs:range :Paper . 
+#  --------------------------- Property 5------------------------- 
+:hasKeyword rdf:type owl:ObjectProperty ;
+            rdfs:label "hasKeyword"@IRI-based; 
+            rdfs:label "hasKeyword"@iri-based; 
+            rdfs:label "hasKeyword"@en; 
+            rdfs:domain :Paper;
+            rdfs:range :Keyword . 
+#  --------------------------- Property 6------------------------- 
+:categoryName rdf:type owl:DatatypeProperty ;
+              rdfs:label "categoryName"@IRI-based; 
+              rdfs:label "categoryName"@iri-based; 
+              rdfs:label "categoryName"@en; 
+              rdfs:domain :Category;
+              rdfs:range xsd:string . 
+#  --------------------------- Property 7------------------------- 
+:writtenBy rdf:type owl:ObjectProperty ;
+           rdfs:label "writtenBy"@IRI-based; 
+           rdfs:label "writtenBy"@iri-based; 
+           rdfs:label "writtenBy"@en; 
+           rdfs:domain :Paper;
+           rdfs:range :Author . 
+#  --------------------------- Property 8------------------------- 
+:venueName rdf:type owl:DatatypeProperty ;
+           rdfs:label "venueName"@IRI-based; 
+           rdfs:label "venueName"@iri-based; 
+           rdfs:label "venueName"@en; 
+           rdfs:domain :Venue;
+           rdfs:range xsd:string . 
+#  --------------------------- Property 9------------------------- 
+:authorAffiliation rdf:type owl:DatatypeProperty ;
+                   rdfs:label "authorAffiliation"@IRI-based; 
+                   rdfs:label "authorAffiliation"@iri-based; 
+                   rdfs:label "authorAffiliation"@en; 
+                   rdfs:domain :Author;
+                   rdfs:range xsd:string . 
+#  --------------------------- Property 10------------------------- 
+:keywordName rdf:type owl:DatatypeProperty ;
+             rdfs:label "keywordName"@IRI-based; 
+             rdfs:label "keywordName"@iri-based; 
+             rdfs:label "keywordName"@en; 
+             rdfs:domain :Keyword;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 11------------------------- 
+:authorName rdf:type owl:DatatypeProperty ;
+            rdfs:label "authorName"@IRI-based; 
+            rdfs:label "authorName"@iri-based; 
+            rdfs:label "authorName"@en; 
+            rdfs:domain :Author;
+            rdfs:range xsd:string . 
+#  --------------------------- Property 12------------------------- 
+:fullText rdf:type owl:DatatypeProperty ;
+          rdfs:label "fullText"@IRI-based; 
+          rdfs:label "fullText"@iri-based; 
+          rdfs:label "fullText"@en; 
+          rdfs:domain :Paper;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 13------------------------- 
+:categoryDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:label "categoryDescription"@IRI-based; 
+                     rdfs:label "categoryDescription"@en; 
+                     rdfs:domain :Category;
+                     rdfs:range xsd:string . 
+#  --------------------------- Property 14------------------------- 
+:venueID rdf:type owl:DatatypeProperty ;
+         rdfs:label "venueID"@IRI-based; 
+         rdfs:label "venueID"@iri-based; 
+         rdfs:label "venueID"@en; 
+         rdfs:domain :Venue;
+         rdfs:range xsd:string . 
+#  --------------------------- Property 15------------------------- 
+:nbCitations rdf:type owl:DatatypeProperty ;
+             rdfs:label "nbCitations"@IRI-based; 
+             rdfs:label "nbCitations"@iri-based; 
+             rdfs:label "nbCitations"@en; 
+             rdfs:domain :Paper;
+             rdfs:range xsd:integer . 
+#  --------------------------- Property 16------------------------- 
+:paperID rdf:type owl:DatatypeProperty ;
+         rdfs:label "paperID"@IRI-based; 
+         rdfs:label "paperID"@iri-based; 
+         rdfs:label "paperID"@en; 
+         rdfs:domain :Paper;
+         rdfs:range xsd:string . 
+#  --------------------------- Property 17------------------------- 
+:dateSubmission rdf:type owl:DatatypeProperty ;
+                rdfs:label "dateSubmission"@IRI-based; 
+                rdfs:label "dateSubmission"@en; 
+                rdfs:domain :Paper;
+                rdfs:range xsd:string . 
+#  --------------------------- Property 18------------------------- 
+:authorID rdf:type owl:DatatypeProperty ;
+          rdfs:label "authorID"@IRI-based; 
+          rdfs:label "authorID"@iri-based; 
+          rdfs:label "authorID"@en; 
+          rdfs:domain :Author;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 19------------------------- 
+:yearPublication rdf:type owl:DatatypeProperty ;
+                 rdfs:label "yearPublication"@IRI-based; 
+                 rdfs:label "yearPublication"@iri-based; 
+                 rdfs:label "yearPublication"@en; 
+                 rdfs:domain :Paper;
+                 rdfs:range xsd:integer . 
+#  --------------------------- Property 20------------------------- 
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:label "belongsTo"@IRI-based; 
+           rdfs:label "belongsTo"@iri-based; 
+           rdfs:label "belongsTo"@en; 
+           rdfs:domain :Paper;
+           rdfs:range :Category . 
+#  --------------------------- Property 21------------------------- 
+:keywordID rdf:type owl:DatatypeProperty ;
+           rdfs:label "keywordID"@IRI-based; 
+           rdfs:label "keywordID"@iri-based; 
+           rdfs:label "keywordID"@en; 
+           rdfs:domain :Keyword;
+           rdfs:range xsd:integer . 
+#  --------------------------- Property 22------------------------- 
+:hasAbstract rdf:type owl:DatatypeProperty ;
+             rdfs:label "hasAbstract"@IRI-based; 
+             rdfs:label "hasAbstract"@iri-based; 
+             rdfs:label "abstract"@en; 
+             rdfs:domain :Paper;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 23------------------------- 
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:label "url"@IRI-based; 
+     rdfs:label "url"@iri-based; 
+     rdfs:label "url"@en; 
+     rdfs:domain :Paper;
+     rdfs:range xsd:string . 
+#  --------------------------- Property 24------------------------- 
+:impactFactor rdf:type owl:DatatypeProperty ;
+              rdfs:label "impactFactor"@en; 
+              rdfs:domain :Venue;
+              rdfs:range xsd:double . 
+#  --------------------------- Property 25------------------------- 
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:label "hasType"@en; 
+         rdfs:domain :Venue;
+         rdfs:range :VenueType . 
+#  --------------------------- Property 26------------------------- 
+:typeName rdf:type owl:DatatypeProperty ;
+          rdfs:label "typeName"@en; 
+          rdfs:domain :VenueType;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 27------------------------- 
+:nbPages rdf:type owl:DatatypeProperty ;
+         rdfs:label "nbPages"@en; 
+         rdfs:domain :Paper;
+         rdfs:range xsd:integer . 
+###  Class Definitions (Number of Classes) 6 ###
+#  --------------------------- Class  0------------------------- 
+:Paper rdf:type owl:Class; 
+       rdfs:label "Paper"@IRI-based; 
+       rdfs:label "Paper"@iri-based; 
+       rdfs:label "Paper"@en . 
+#  --------------------------- Class  1------------------------- 
+:Venue rdf:type owl:Class; 
+       rdfs:label "Venue"@IRI-based; 
+       rdfs:label "Venue"@iri-based; 
+       rdfs:label "Venue"@en . 
+#  --------------------------- Class  2------------------------- 
+:Author rdf:type owl:Class; 
+        rdfs:label "Author"@IRI-based; 
+        rdfs:label "Author"@iri-based; 
+        rdfs:label "Author"@en . 
+#  --------------------------- Class  3------------------------- 
+:Keyword rdf:type owl:Class; 
+         rdfs:label "Keyword"@IRI-based; 
+         rdfs:label "Keyword"@iri-based; 
+         rdfs:label "Keyword"@en . 
+#  --------------------------- Class  4------------------------- 
+:Category rdf:type owl:Class; 
+          rdfs:label "Category"@IRI-based; 
+          rdfs:label "Category"@iri-based; 
+          rdfs:label "Category"@en . 
+#  --------------------------- Class  5------------------------- 
+:VenueType rdf:type owl:Class; 
+           rdfs:label "VenueType"@en . 
