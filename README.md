@@ -4,7 +4,7 @@ This project focuses on constructing a Knowledge Graph (KG) of academic research
 
 The construction is done by fetching, cleaning, and structuring data from various sources, including ArXiv, Google Scholar, and full-text papers. The KG is built and populated using Neo4j, and the data is made accessible via a Streamlit app with a chatbox powered by OpenAI.
 <div align="center">
-    <img width="346" alt="image" src="https://github.com/user-attachments/assets/e19c7618-3c91-43f9-a9a0-946c4f63b195">
+    <img width="346" alt="image" src="https://github.com/user-attachments/assets/85d98ee7-26c9-44f1-b456-fcad40c05351">
 </div>
 
 
@@ -40,7 +40,7 @@ The KG is structured around the following main entities and relationships:
     - hasType: Connects Venue to VenueType
     - cites: Connects Paper to another Paper (citation relationship)
 <div align="center">
-<img width="381" alt="image" src="https://github.com/user-attachments/assets/1e89ee0c-7417-4053-a45f-c3cc7e376ddc">
+<img width="381" alt="image" src="https://github.com/user-attachments/assets/5175bee4-8cfc-48f6-9c06-0713bbda8dfe">
 </div>
 
 ## Try It Out
@@ -48,7 +48,7 @@ The KG is structured around the following main entities and relationships:
 - **Demo Video**: Watch a demonstration of the app in action.
 
 
-https://github.com/user-attachments/assets/db47741b-9c69-42f4-b5bf-7e986d02a556
+https://github.com/user-attachments/assets/173e7b49-4dd3-4b7c-8fb2-999cd0d0e0f0
 
 ## Repository Structure
 
